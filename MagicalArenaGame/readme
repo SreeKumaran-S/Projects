@@ -1,0 +1,46 @@
+MagicalArena Game Input : (All of the given input be obtained as string and converted to respective data types)
+
+1) n - total number of players (int)
+2) Each player health,strength,attack (int ,int ,int) each values must be greater than 0
+3) Two players id's [1-n] inclusive
+
+Game starts and if need time delay uncomment the multi-threading code lines (multi)
+4) Press y-> play again (or) any key to exit
+
+------------------------------------------------------------------------------------------
+Classes:
+ MagicalArena (main class)
+ Player ->  int id,int health,int strength,int attack.
+ 
+Methods:
+ arena(Player one,Player two); -> Determine who to attack and who to defend
+ play(Player one,Player two);  -> Players strikes and Defends
+ details();                    -> All players information
+ typeChk(String val,String dataType) -> Checks wheather the given val is matching dataType's type.
+DataStructure:
+ HashMap<Integer,Player> players;
+
+------------------------------------------------------------------------------------------
+
+Control Flow :
+1) Setting input resources from user and saving it in players(HashMap)
+2) Display players data
+3) Getting valid player ids  
+3) Entering arena(Player one,Player two)method
+4) Entering play(Player one,Player two)method
+5) y-> goto step 2 else terminate the program
+6) Code ran successfully
+
+------------------------------------------------------------------------------------------
+TestCases :
+1)
+  n -> 2
+  [health,strength,attack] -> [[50,5,10],[100,10,5]] 
+2)
+  n -> 3
+  [health,strength,attack] -> [[50,5,10],[100,10,5],[75,2,8]]
+3)
+  n -> 2
+  [health,strength,attack] ->[["ab","5","c"],["5","9","54"]]  
+  
+   
