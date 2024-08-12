@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		html{
+			height: 100%;
+			background-color: lightsalmon;
+
+		}
+        .ipTable{
+        	display:flex;
+        	justify-content: center;
+        	flex-wrap:wrap;
+
+        }
+        
+        h2 , hr{
+        	
+        	display:flex;
+        	justify-content: center;
+        	flex-basis: 100%;
+
+        }
+
+        .ipTable table{
+        	height:200px;
+        	width:200px;
+        	border:2px solid greenyellow;
+        			
+        }
+        .ipTable table th,td{
+        	border:2px solid black;
+        	width:100%;	
+
+        }
+        button, select{
+        	width:100%;
+        }
+        #save:hover{
+        	background-color: cyan;
+        	border-radius:10px;
+
+        }
+       
+
+        .res{
+        	display: flex;
+        	margin-top:10px;
+        	justify-content: center;
+        	
+        }
+        .res table
+        {
+        	border:2px solid black;
+        }
+        .res table th,td
+        {
+        	border:2px solid black;
+        }
+        #del:hover
+        {
+ 			background-color: red;
+        }
+        
+	</style>
+</head>
+<body>
+	<div class="ipTable">
+    <h2>STUDENT FORM</h2>
+    <hr>
+    <table>
+    	<tr>   <th>Name</th> <td> <input id="name" type="text" > </td> </tr>
+    	<tr>   <th>Age</th> <td> <input id="age" type="text"> </td> </tr>
+    	<tr> 
+    		<th>Gender</th> 
+    	    <td> <input type="radio" name="gen" value="Male" >Male
+    	    	 <input type="radio" name="gen" value="FeMale" >Female
+    	    </td> 
+    	</tr>
+    	<tr> 
+    	  <th>Course</th> 
+    	  <td>
+    	      <select id="course">
+    	      	<option>Java</option>
+    	      	<option>MySql</option>
+    	      	<option>Js</option>
+    	      </select> 
+    	  </td>
+        </tr>
+        <tr>   <th>E-mail</th> <td> <input id="email" type="email"> </td> </tr>
+        <tr>   <td  colspan=2><button id="save" onclick="upload()">Save</button>  </td></tr>
+    </table>
+    <hr>
+   </div>
+
+</body>
+
+<script>
+  function upload()
+   {
+   	console.log("saved");
+
+   	var name=document.getElementById("name");
+   	var age=document.getElementById("age");
+   	var gen=document.querySelector("input[name='gen']:checked");
+   	var course=document.getElementById("course");
+   	var mail=document.getElementById("email");
+   
+    var op=document.querySelector(".res");
+    if(op==null)
+    {
+    	var add=document.querySelector("div");	
+    	var nt=document.createElement("div");
+    	nt.setAttribute("class","res");
+    	nt.innerHTML= "<table id='aop'> <tr> <th>Name</th> <th>Age</th> <th>Course</th> <th>Gender</th> <th>Email</th> <th>Action</th> </tr> </table>";
+    	add.insertAdjacentElement("afterend",nt);
+    	
+    }
+    op=document.getElementById("aop");
+    var crt=document.createElement("tr");
+    
+    crt.innerHTML=`<td>${name.value}</td> <td>${age.value}</td> <td>${course.value}</td> <td>${gen.value}</td> <td>${mail.value}</td> 
+    <td><button id="del" onclick="reducer(event)">Delete</button></td>`;
+    op.append(crt);
+    
+   }
+
+   function reducer(event)
+    {
+    	console.log(event.target);
+    	event.target.parentElement.parentElement.remove();   	
+    }
+
+</script>
+</html>
