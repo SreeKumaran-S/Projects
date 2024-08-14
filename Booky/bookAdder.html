@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>📚 Booky</title>
+	<style>
+		*{
+			margin: 0;
+			padding:0;		
+		}
+		
+		nav{
+			background-color: salmon;
+			padding:10px;
+			font-size:30px;			
+		}
+		.container{
+			display: flex;
+			margin-top:15px;
+			margin-left:15px;
+			gap:20px;
+			flex-wrap:wrap;		
+		}
+		
+		.box{
+			height: fit-content;
+			width:20%;
+			background-color: black;
+			color:white;
+			padding:10px;
+			border-radius: 10px;
+		}
+		.box h2{
+			color:salmon;
+			margin-bottom:5px;
+		}
+		.box h3
+		{
+			margin-bottom:5px;
+		}
+	  .box p{
+	  	margin-bottom:5px;
+	  }
+		.box button{
+			padding:5px;
+			background-color: red;
+			border-radius:15px;
+		}
+
+
+    .over{
+    	position: fixed;
+    	background-color: black;
+    	height:100vh;
+    	width:100vw;
+    	opacity: 0.8;
+    	
+    }
+
+    .entireScreen{
+    	height: 100vh;
+    	width: 100vw;
+    	display: flex;
+    	position:fixed;
+    	justify-content: center;
+    	align-items:center;
+
+    }
+    
+    .addBook {
+			background-color: red;
+			flex-direction: column;
+		  min-width:300px;
+			border:2px solid black;
+			border-radius: 10px;
+			
+		}
+    form{
+    	display: flex;
+    	flex-direction: column;
+    }
+
+    .addBook h1{
+    	  padding-top:10px;
+		  	padding-bottom:10px;
+        margin-left:20px;
+        margin-right:20px;
+        margin-bottom:10px;
+        flex-basis:100%;
+        flex-grow:1;
+    }
+		.addBook input{
+			padding-top:10px;
+			padding-bottom:10px;
+			display:flex;
+			flex-grow:1;
+
+			margin-left:20px;
+			margin-bottom:10px;
+			margin-right:20px;
+			background: transparent;
+			border:none;
+			border-bottom: black 2px solid;
+			outline:none;
+		}
+
+		.addBook textarea{
+			padding-top:10px;
+			padding-bottom:10px;
+			display:flex;
+			flex-grow:1;
+			margin-left:20px;
+			margin-right:20px;
+			margin-bottom:10px;
+			background: transparent;
+			border:none;
+			border-bottom: black 2px solid;
+			outline:none;
+			resize: none;
+		}
+
+		.addBook button
+		{
+			padding:10px;
+		  margin-left:20px;
+		  margin-bottom:10px;
+		  background-color: darkred;
+		  color:white;
+		  border-radius: 10px;
+		}
+
+		.upload{
+			font-size: 47px;
+		  text-align: center;
+			background-color: red;
+			border-radius: 50%;
+			height: 50px;
+			width: 50px;
+
+			position: fixed;
+			bottom:20px;
+			right:20px;
+		}
+
+		 .over,.entireScreen{
+			display: none;
+		}
+
+	</style>
+</head>
+
+<body>
+
+  <div class="over">
+		</div>
+	<div class="entireScreen">
+	<div class="addBook">
+  <h1>Add Book</h1>
+  <form>
+  	<input type="text" placeholder="Book Title">	
+  	<input type="text" placeholder="Book Author">
+  	<textarea placeholder="Short Description"></textarea><br>
+  	<div class ="operateBut">
+  	<button id="add">Add</button>
+  	<button id="cancel">Cancel</button> 
+  </div>
+  </form>
+  </div>
+</div>
+
+  <nav>
+  	<h1>Booky</h1>
+  </nav>
+
+<div class="container">
+  <div class="box">
+  	<h2>Rich Dad Poor Dad</h2> 
+  	<h3>Robert</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <button class="delete">Delete</button>
+  </div>
+</div>
+
+<div class="upload">+</div>
+
+</body>
+
+<script>
+	  var up=document.querySelector(".upload");
+	  var one=document.querySelector(".entireScreen");
+	  var two=document.querySelector(".over");
+	  up.addEventListener("click",function (){
+	  	one.style.display="flex";
+	  	two.style.display="block";
+	  });
+
+	 var adder=document.getElementById("add");
+	 var cancel=document.getElementById("cancel");
+	 cancel.addEventListener("click",function (event) {
+	   event.preventDefault();
+	   one.style.display="none";
+	   two.style.display="none";
+	 });
+
+	 var h=document.querySelectorAll("input");
+	 adder.addEventListener("click",function(event){
+	 	event.preventDefault();
+	 	var bname=h[0].value;
+	  var authname=h[1].value;
+	  var cont=document.querySelector('textarea').value;
+	  var nbook=document.createElement("div");
+	  nbook.setAttribute('class','box');
+		nbook.innerHTML=`<h2>${bname}</h2> 
+			  	<h3>${authname}</h3>
+			    <p>${cont}</p>
+			    <button class="delete">Delete</button>`;
+		nbook.addEventListener("click",function(event){
+   		event.target.parentElement.remove();
+    });
+		document.querySelector(".container").append(nbook);
+
+		one.style.display="none";
+	  two.style.display="none";
+	 }); 
+
+   var del=document.querySelector(".delete");
+   del.addEventListener("click",function(event){
+   		event.target.parentElement.remove();
+   });
+</script>
+
+</html>
