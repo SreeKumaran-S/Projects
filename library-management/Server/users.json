@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "role": "admin",
+        "username": "admin",
+        "password": "admin123"
+    },
+    {
+        "id":1,
+        "role": "librarian",
+        "username": "librarian",
+        "password": "librarian123"
+    },
+    {
+        "id":1,
+        "role": "guest",
+        "username": "guest1",
+        "password": "guest123"
+    },
+    {
+        "id":2,
+        "role": "guest",
+        "username": "guest2",
+        "password": "guest123"
+    },
+    {
+        "id":3,
+        "role": "guest",
+        "username": "guest3",
+        "password": "guest123"
+    }
+]

@@ -1,0 +1,21 @@
+
+.ui-error-container{
+    border: 1px solid black;
+    width: fit-content;
+    margin: 100px auto;
+    padding: 25px;
+    ul{
+        list-style-type:disc; 
+        margin-left: 40px;
+    }
+    a{
+        color: darkcyan;
+        text-decoration: underline;
+    }
+    .ui-hyperlink{
+        display: flex;
+        flex-direction: row;
+        gap:10px;
+        justify-content: center;
+    }
+}

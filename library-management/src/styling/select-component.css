@@ -1,0 +1,48 @@
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.display-none{
+    display:none;
+}
+   
+.ui-select-container{
+    background-color: beige;
+    border:1px solid black;
+    border-radius:5px;
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    padding:10px;
+    z-index:1;
+    min-width: 209px;
+    max-width: 209px;
+    min-height: 215px;
+    max-height: 215px;
+}
+.ui-select-search{
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 25px;
+    max-height: 25px;
+    border:1px solid grey;
+    border-radius: 5px;
+}
+.ui-selectable-list-container{
+    padding:10px;
+}
+.ui-selectable-list{
+    overflow: auto;
+    max-height: 190px;
+}
+.ui-selectable-item{
+    font-size: 15px;
+    font-style: italic;
+    margin-bottom:5px;
+    padding:5px;
+    cursor: pointer;
+    border:1px solid black;
+    border-radius:5px;
+}
+ 

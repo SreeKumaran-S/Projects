@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "title": "To Kill a Mockingbird",
+    "authorId": 1,
+    "author": "Harper Lee",
+    "isbn": 1467984258926,
+    "genre": "Fiction",
+    "copies": 5
+  },
+  {
+    "id": 3,
+    "title": "The Great Gatsby",
+    "authorId": 4,
+    "author": "F. Scott Fitzgerald",
+    "isbn": 8503822556045,
+    "genre": "Classic",
+    "copies": 5
+  },
+  {
+    "id": 5,
+    "title": "Pride and Prejudice",
+    "authorId": 2,
+    "author": "Jane Austen",
+    "isbn": 9599140047388,
+    "genre": "Romance",
+    "copies": 4
+  },
+  {
+    "id": 6,
+    "title": "The Hobbit",
+    "authorId": 3,
+    "author": "J.R.R. Tolkien",
+    "isbn": 8633480246590,
+    "genre": "Fantasy",
+    "copies": 6
+  },
+  {
+    "id": 7,
+    "title": "The Catcher in the Rye",
+    "authorId": 5,
+    "author": "J.D. Salinger",
+    "isbn": 1822212438739,
+    "genre": "Fiction",
+    "copies": 3
+  },
+  {
+    "id": 8,
+    "title": "The Alchemist",
+    "authorId": 6,
+    "author": "Paulo Coelho",
+    "isbn": 1546747484764,
+    "genre": "Adventure",
+    "copies": 5
+  },
+  {
+    "id": 9,
+    "title": "Moby Dick",
+    "authorId": 7,
+    "author": "Herman Melville",
+    "isbn": 7429566264543,
+    "genre": "Classic",
+    "copies": 2
+  },
+  {
+    "id": 10,
+    "title": "War and Peace",
+    "authorId": 8,
+    "author": "Leo Tolstoy",
+    "isbn": 7580704516264,
+    "genre": "Historical",
+    "copies": 2
+  },
+  {
+    "id": 12,
+    "title": "The Road",
+    "authorId": 10,
+    "author": "Cormac McCarthy",
+    "isbn": 1508281020743,
+    "genre": "Post-Apocalyptic",
+    "copies": 6
+  },
+  {
+    "id": 13,
+    "title": "The Fault in Our Stars",
+    "authorId": 11,
+    "author": "John Green",
+    "isbn": 3594084719826,
+    "genre": "Young Adult",
+    "copies": 5
+  },
+  {
+    "id": 14,
+    "title": "Sapiens",
+    "authorId": 12,
+    "author": "Yuval Noah Harari",
+    "isbn": 6417293058471,
+    "genre": "Science",
+    "copies": 4
+  },
+  {
+    "id": 15,
+    "title": "Crime and Punishment",
+    "authorId": 13,
+    "author": "Fyodor Dostoevsky",
+    "isbn": 9128374650293,
+    "genre": "Classic",
+    "copies": 3
+  },
+  {
+    "id": 16,
+    "title": "Brave New World",
+    "authorId": 44,
+    "author": "zack snyder",
+    "isbn": 4850293746510,
+    "genre": "Fantasy",
+    "copies": 5
+  },
+  {
+    "id": 17,
+    "title": "The Kite Runner",
+    "authorId": 15,
+    "author": "Khaled Hosseini",
+    "isbn": 7058392710459,
+    "genre": "Drama",
+    "copies": 5
+  },
+  {
+    "id": 18,
+    "title": "Jane Eyre",
+    "authorId": 16,
+    "author": "Charlotte Brontë",
+    "isbn": 5728391048572,
+    "genre": "Romance",
+    "copies": 4
+  },
+  {
+    "id": 19,
+    "title": "The Shining",
+    "authorId": 17,
+    "author": "Stephen King",
+    "isbn": 4890237405961,
+    "genre": "Horror",
+    "copies": 3
+  },
+  {
+    "id": 20,
+    "title": "Thinking, Fast and Slow",
+    "authorId": 18,
+    "author": "Daniel Kahneman",
+    "isbn": 9304751827465,
+    "genre": "Psychology",
+    "copies": 4
+  },
+  {
+    "id": 21,
+    "title": "The Da Vinci Code",
+    "authorId": 19,
+    "author": "Dan Brown",
+    "isbn": 5748392019458,
+    "genre": "Thriller",
+    "copies": 6
+  },
+  {
+    "id": 22,
+    "title": "Gone Girl",
+    "authorId": 20,
+    "author": "Gillian Flynn",
+    "isbn": 8394750192837,
+    "genre": "Thriller",
+    "copies": 4
+  },
+  {
+    "id": 23,
+    "title": "Life of Pi",
+    "authorId": 21,
+    "author": "Yann Martel",
+    "isbn": 2938475610283,
+    "genre": "Adventure",
+    "copies": 3
+  },
+  {
+    "id": 24,
+    "title": "Frankenstein",
+    "authorId": 22,
+    "author": "Mary Shelley",
+    "isbn": 1847569203847,
+    "genre": "Horror",
+    "copies": 2
+  },
+  {
+    "id": 26,
+    "title": "The Lord of the Rings",
+    "authorId": 3,
+    "author": "J.R.R. Tolkien",
+    "isbn": 7384912058374,
+    "genre": "Fantasy",
+    "copies": 7
+  },
+  {
+    "id": 27,
+    "title": "Catch-22",
+    "authorId": 24,
+    "author": "Joseph Heller",
+    "isbn": 9102837465192,
+    "genre": "Satire",
+    "copies": 2
+  },
+  {
+    "id": 28,
+    "title": "The Picture of Dorian Gray",
+    "authorId": 25,
+    "author": "Oscar Wilde",
+    "isbn": 2039485710293,
+    "genre": "Classic",
+    "copies": 3
+  },
+  {
+    "id": 29,
+    "title": "The Chronicles of Narnia",
+    "authorId": 26,
+    "author": "C.S. Lewis",
+    "isbn": 7582910348572,
+    "genre": "Fantasy",
+    "copies": 6
+  },
+  {
+    "id": 31,
+    "title": "The Girl with the Dragon Tattoo",
+    "authorId": 27,
+    "author": "Stieg Larsson",
+    "isbn": 9834750912837,
+    "genre": "Mystery",
+    "copies": 3
+  },
+  {
+    "id": 32,
+    "title": "Fahrenheit 451",
+    "authorId": 28,
+    "author": "Ray Bradbury",
+    "isbn": 4938571028374,
+    "genre": "Dystopian",
+    "copies": 4
+  },
+  {
+    "id": 34,
+    "title": "The Secret",
+    "authorId": 30,
+    "author": "Rhonda Byrne",
+    "isbn": 8374659102837,
+    "genre": "Self-Help",
+    "copies": 5
+  },
+  {
+    "id": 35,
+    "title": "The Subtle Art of Not Giving a F*ck",
+    "authorId": 31,
+    "author": "Mark Manson",
+    "isbn": 9847501928374,
+    "genre": "Self-Help",
+    "copies": 4
+  },
+  {
+    "id": 36,
+    "title": "Educated",
+    "authorId": 32,
+    "author": "Tara Westover",
+    "isbn": 3928475610928,
+    "genre": "Memoir",
+    "copies": 3
+  },
+  {
+    "id": 37,
+    "title": "The Power of Habit",
+    "authorId": 33,
+    "author": "Charles Duhigg",
+    "isbn": 7482910394857,
+    "genre": "Psychology",
+    "copies": 4
+  },
+  {
+    "id": 38,
+    "title": "Thinking in Systems",
+    "authorId": 34,
+    "author": "Donella H. Meadows",
+    "isbn": 7483920192837,
+    "genre": "Science",
+    "copies": 3
+  },
+  {
+    "id": 39,
+    "title": "Kafka on the Shore",
+    "authorId": 35,
+    "author": "Haruki Murakami",
+    "isbn": 9304751827469,
+    "genre": "Fiction",
+    "copies": 4
+  },
+  {
+    "id": 40,
+    "title": "The Silent Patient",
+    "authorId": 36,
+    "author": "Alex Michaelides",
+    "isbn": 8573920485710,
+    "genre": "Thriller",
+    "copies": 3
+  },
+  {
+    "id": 41,
+    "title": "Where the Crawdads Sing",
+    "authorId": 37,
+    "author": "Delia Owens",
+    "isbn": 8394750912837,
+    "genre": "Mystery",
+    "copies": 5
+  },
+  {
+    "id": 43,
+    "title": "The Midnight Library",
+    "authorId": 39,
+    "author": "Matt Haig",
+    "isbn": 7483920192831,
+    "genre": "Fiction",
+    "copies": 3
+  },
+  {
+    "id": 44,
+    "title": "The Man Who Mistook His Wife for a Hat",
+    "authorId": 42,
+    "author": "lokesh kanagaraj",
+    "isbn": 9304751827464,
+    "genre": "Science",
+    "copies": 2
+  },
+  {
+    "id": 45,
+    "title": "Leo",
+    "authorId": 45,
+    "author": "Leo das",
+    "isbn": 4850293746511,
+    "genre": "Adventure",
+    "copies": 5000
+  },
+  {
+    "id": 46,
+    "title": "testing",
+    "authorId": 2,
+    "author": "Jane Austen",
+    "isbn": 8503822526045,
+    "genre": "Adventure",
+    "copies": 1
+  },
+  {
+    "id": 48,
+    "title": "testing",
+    "authorId": 2,
+    "author": "Jane Austen",
+    "isbn": 8513822526045,
+    "genre": "Adventure",
+    "copies": 500
+  }
+]

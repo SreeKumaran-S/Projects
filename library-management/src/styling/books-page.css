@@ -1,0 +1,14 @@
+
+.ui-sort-btn{
+    position: relative;
+    left: 10px;
+}
+.ui-books-page-search-filter{
+    position: relative;
+    top: 8px;
+    height: 25px;
+    width: 100%;
+    right: 4px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
