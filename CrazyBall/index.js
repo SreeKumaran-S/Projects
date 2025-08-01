@@ -11,7 +11,7 @@ window.onload = function () {
     let reachedLeft = false;
     let reachedRight = false;
     
-    let speed = 10000000;       // NEXT IT WILL BE GOING TO  SUPER SAYAN .....
+    let speed = 1;      
     let frames = 1;
    
     
