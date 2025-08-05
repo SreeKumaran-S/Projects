@@ -1,0 +1,66 @@
+html,body{
+    margin:0;
+    padding:0;
+    background-color: cadetblue;
+}
+.header{
+    text-align: center;
+}
+.section-title{
+    text-decoration: underline;
+}
+.input-label{
+    font-weight: bold;
+    font-size: 22px;
+}
+.input-grid{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    width: 100%;
+}
+
+
+.input-group textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+
+.ui-result-area {
+    width: 100%;
+    min-height: 300px;
+    padding: 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 14px;
+    white-space: pre-wrap;
+    overflow-y: auto;
+}
+.operation-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+textarea{
+    background-color: lightblue;
+    resize: none;
+}
+button{
+    padding:10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: beige;
+}

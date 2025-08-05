@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="section-title">Library Management System</h1>
+        </div>
+
+        <div class="main-content">
+            <div class="input-section">
+                <h3 class="section-title">Request Configuration</h3>
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label for="queryParams" class="input-label">Query Parameters (JSON):</label>
+                        <textarea id="queryParams" placeholder="Enter JSON data here..."></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label for="requestBody" class="input-label">Request Body (JSON):</label>
+                        <textarea id="requestBody" placeholder="Enter JSON data here..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="operations-grid">
+                <div class="operation-section">
+                    <h3>AUTHENTICATION</h3>
+                    <div class="button-group">
+                        <button class="btn btn-read" onclick="getCurrentUser()" data-action="getCurrentUser">LOGIN STATUS</button>
+                        <button class="btn btn-create" onclick="login()" data-action="login">Login</button>
+                        <button class="btn btn-update" onclick="logout()" data-action="logout">Logout</button>
+                    </div>
+                </div>
+
+                <div class="operation-section">
+                    <h3>ROLES</h3>
+                    <div class="button-group">
+                        <button class="btn btn-read" onclick="getAllRoles()" data-action="getAllRoles">Get All Roles</button>
+                        <button class="btn btn-read" onclick="getRoleById()" data-action="getRoleById">Get Role by ID</button>
+                    </div>
+                </div>
+
+                 <div class="operation-section">
+                    <h3>USERS</h3>
+                    <div class="button-group">
+                        <button class="btn btn-read" onclick="getUsersPaginated()" data-action="getUsersPaginated">Get Users (Paginated)</button>
+                        <button class="btn btn-read" onclick="getUserById()" data-action="getUserById">Get User by ID</button>
+                        <button class="btn btn-create" onclick="addUser()" data-action="addUser">Add User</button>
+                        <button class="btn btn-update" onclick="updateUser()" data-action="updateUser">Update User</button>
+                        <button class="btn btn-delete" onclick="deleteUser()" data-action="deleteUser">Delete User</button>
+                    </div>
+                </div>
+                
+                <div class="operation-section">
+                    <h3>BOOKS</h3>
+                    <div class="button-group">
+                        <button class="btn btn-read" onclick="getBooksPaginated()" data-action="getBooksPaginated">Get Books (Paginated)</button>
+                        <button class="btn btn-read" onclick="getBookById()" data-action="getBookById">Get Book by ID</button>
+                        <button class="btn btn-create" onclick="addBook()" data-action="addBook">Add Book</button>
+                        <button class="btn btn-update" onclick="updateBook()" data-action="updateBook">Update Book</button>
+                        <button class="btn btn-delete" onclick="deleteBook()" data-action="deleteBook">Delete Book</button>
+                    </div>
+                </div>
+
+                <div class="operation-section">
+                    <h3>AUTHORS</h3>
+                    <div class="button-group">
+                        <button class="btn btn-read" onclick="getAuthorsPaginated()" data-action="getAuthorsPaginated">Get Authors (Paginated)</button>
+                        <button class="btn btn-read" onclick="getAuthorById()" data-action="getAuthorById">Get Author by ID</button>
+                        <button class="btn btn-create" onclick="addAuthor()" data-action="addAuthor">Add Author</button>
+                        <button class="btn btn-update" onclick="updateAuthor()" data-action="updateAuthor">Update Author</button>
+                        <button class="btn btn-delete" onclick="deleteAuthor()" data-action="deleteAuthor">Delete Author</button>
+                    </div>
+                </div>
+
+                <div class="operation-section">
+                    <h3>ALLOCATIONS</h3>
+                    <div class="button-group">
+                        <button class="btn btn-read" onclick="getAllocationsPaginated()" data-action="getAllocationsPaginated">Get Allocations (Paginated)</button>
+                        <button class="btn btn-read" onclick="getAllocationById()" data-action="getAllocationById">Get Allocation by ID</button>
+                        <button class="btn btn-create" onclick="borrowBook()" data-action="borrowBook">Borrow Book</button>
+                        <button class="btn btn-update" onclick="returnBook()" data-action="returnBook">Return Book</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="result-section">
+                <h3 class="section-title">Results</h3>
+                <textarea id="resultArea" class="ui-result-area" placeholder="Results will appear here..."></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
