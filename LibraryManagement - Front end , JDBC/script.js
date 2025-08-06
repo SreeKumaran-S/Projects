@@ -243,6 +243,8 @@ function returnBook(){
 function clearInputValues(){
     queryParams.value='';
     requestBody.value='';
+    queryParamsJson={};
+    requestBodyJson={};
 }
 
 

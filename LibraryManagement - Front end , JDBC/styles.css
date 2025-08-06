@@ -6,6 +6,9 @@ html,body{
 .header{
     text-align: center;
 }
+.container{
+    padding:10px;
+}
 .section-title{
     text-decoration: underline;
 }
@@ -29,7 +32,6 @@ html,body{
 
 
 .input-group textarea {
-    width: 100%;
     min-height: 120px;
     padding: 12px;
     border: 2px solid #e9ecef;
@@ -37,10 +39,12 @@ html,body{
     font-size: 13px;
 }
 
-
+.result-section{
+    width:100%;
+}
 .ui-result-area {
-    width: 100%;
     min-height: 300px;
+    width:-webkit-fill-available;
     padding: 15px;
     border: 2px solid #e9ecef;
     border-radius: 8px;
@@ -48,19 +52,35 @@ html,body{
     white-space: pre-wrap;
     overflow-y: auto;
 }
+.operations-grid{
+  margin-top: 10px;
+}
+  
 .operation-section{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 50px;
+    .ui-action-header-title{
+        min-width: 180px;
+        max-width: 180px;
+    }
 }
 textarea{
     background-color: lightblue;
     resize: none;
 }
-button{
+.button-group{
+    display: flex;
+    gap: 50px;
+}
+.btn{
     padding:10px;
     border-radius: 5px;
     cursor: pointer;
     background-color: beige;
+    &:hover{
+        background-color: aquamarine;
+        transform:scale(1.5);
+    }
 }
