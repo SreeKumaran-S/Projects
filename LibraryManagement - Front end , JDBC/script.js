@@ -214,7 +214,7 @@ function getAllocationsPaginated(){
 }
 
 function getAllocationById(){
-    let id = prompt("Enter Allocation ID:");
+    let id = prompt("Enter User ID:");
     if (!id) {
         resultArea.value = "Error: No ID provided";
         return;
@@ -231,12 +231,7 @@ function borrowBook(){
 }
 
 function returnBook(){
-    let id = prompt("Enter Allocation ID:");
-    if (!id) {
-        resultArea.value = "Error: No ID provided";
-        return;
-    }
-    apiRequest(`/allocations/${id}`, 'PUT', requestBodyJson, (resp) => {
+    apiRequest('/allocations', 'PUT', requestBodyJson, (resp) => {
         resultArea.value = JSON.stringify(resp, null, 2);
     });
 }

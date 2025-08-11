@@ -39,11 +39,11 @@ public class AllocationDAO {
         }
     }
     
-    public Allocation getAllocationById(int id) {
-        String query = "SELECT * FROM allocations WHERE id = ?";
+    public Allocation getAllocationByUserId(int user_id) {
+        String query = "SELECT * from allocations where user_id = ? ORDER BY allocated_on DESC LIMIT 1";
         try (Connection conn = DBConnection.getConnection();
                 PreparedStatement ps = conn.prepareStatement(query)) {
-            ps.setInt(1, id);
+            ps.setInt(1, user_id);
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
                     return createAllocationFromResultSet(rs);

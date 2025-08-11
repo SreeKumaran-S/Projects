@@ -43,6 +43,7 @@ public class AllocationServlet extends HttpServlet {
             }
 
             AllocationService allocationService = new AllocationService();
+            
             allocationService.borrowBook(allocation);
             ResponseUtil.sendSuccess(resp, "Book borrowed successfully");
             
@@ -60,12 +61,12 @@ public class AllocationServlet extends HttpServlet {
         
         if (pathInfo != null && pathInfo.length() > 1) {
             try {
-                int allocationId = Integer.parseInt(pathInfo.substring(1));
+                int userId = Integer.parseInt(pathInfo.substring(1));
                 AllocationService allocationService = new AllocationService();
-                Allocation allocation = allocationService.getAllocationById(allocationId);
+                Allocation allocation = allocationService.getAllocationByUserId(userId);
                 ResponseUtil.sendSuccess(resp, allocation);
             } catch (NumberFormatException e) {
-                ResponseUtil.badRequest(resp, "Invalid allocation ID format");
+                ResponseUtil.badRequest(resp, "Invalid user ID format");
             } catch (IllegalArgumentException e) {
                 ResponseUtil.badRequest(resp, e.getMessage());
             } catch (Exception e) {
@@ -98,16 +99,7 @@ public class AllocationServlet extends HttpServlet {
     }
 
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String pathInfo = req.getPathInfo();
-        
-        if (pathInfo == null || pathInfo.length() <= 1) {
-            ResponseUtil.badRequest(resp, "Allocation ID is required");
-            return;
-        }
-        
         try {
-            int allocationId = Integer.parseInt(pathInfo.substring(1));
-            
             StringBuilder sb = new StringBuilder();
             String line;
             try (BufferedReader reader = req.getReader()) {
@@ -136,8 +128,6 @@ public class AllocationServlet extends HttpServlet {
                 return;
             }
             
-            allocation.setId(allocationId);
-            
             AllocationService allocationService = new AllocationService();
             Allocation returnedAllocation = allocationService.returnBook(allocation);
             
@@ -149,7 +139,7 @@ public class AllocationServlet extends HttpServlet {
             ResponseUtil.sendSuccess(resp, message);
             
         } catch (NumberFormatException e) {
-            ResponseUtil.badRequest(resp, "Invalid allocation ID format");
+            ResponseUtil.badRequest(resp, "Invalid user ID format");
         } catch (IllegalArgumentException e) {
             ResponseUtil.badRequest(resp, e.getMessage());
         } catch (Exception e) {

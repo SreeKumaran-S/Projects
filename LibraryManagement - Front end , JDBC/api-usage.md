@@ -20,14 +20,49 @@
 
 ============================================== END ==============================================
 
+********************************** USERS **********************************
+
+1. GET - http://localhost:8000/LibraryManagement/users
+queryParams
+{
+  "startIndex":0,
+  "limit":10
+}
+  1.1 GET SINGLE USER - GET http://localhost:8000/LibraryManagement/users/:userId
+
+2. POST - http://localhost:8000/LibraryManagement/users
+body
+{
+  "name": "john_doe",
+  "password": "password123",
+  "email": "john.doe@example.com",
+  "roleId": 1
+}
+
+3. PUT - http://localhost:8000/LibraryManagement/users/:userId
+{
+  "name": "updated_user",
+  "password": "newpassword123",
+  "email": "updated@example.com",
+  "roleId": 2
+}
+4. DELETE - http://localhost:8000/LibraryManagement/users/:userId
+
+============================================== END ==============================================
 
 ********************************** BOOKS **********************************
 
-1. GET  - http://localhost:8000/LibraryManagement/books?startIndex=0&limit=10
+1. GET  - http://localhost:8000/LibraryManagement/books
+queryParams
+{
+  "startIndex":0,
+  "limit":10
+}
 
   1.1 GET SINGLE BOOK - GET http://localhost:8000/LibraryManagement/books/:bookId
 
 2. POST -http://localhost:8000/LibraryManagement/books
+body
 {
   "name": "The Great Gatsby",
   "authorId": 1,
@@ -53,11 +88,16 @@
 
 ********************************** AUTHORS **********************************
 
-1. GET -  http://localhost:8000/LibraryManagement/authors?startIndex=0&limit=10
-
+1. GET -  http://localhost:8000/LibraryManagement/authors
+queryParams
+{
+  "startIndex":0,
+  "limit":10
+}
    1.1 GET SINGLE AUTHOR - http://localhost:8000/LibraryManagement/authors/:authorId
 
 2. POST http://localhost:8000/LibraryManagement/authors
+body
 {
   "name": "John Doe",
   "email": "john.doe@example.com"
@@ -73,44 +113,25 @@
 
 ============================================== END ==============================================
 
-********************************** USERS **********************************
-
-1. GET - http://localhost:8000/LibraryManagement/users?startIndex=0&limit=10
-
-  1.1 GET SINGLE USER - GET http://localhost:8000/LibraryManagement/users/:userId
-
-2. POST - http://localhost:8000/LibraryManagement/users
-{
-  "name": "john_doe",
-  "password": "password123",
-  "email": "john.doe@example.com",
-  "roleId": 1
-}
-
-3. PUT - http://localhost:8000/LibraryManagement/users/:userId
-{
-  "name": "updated_user",
-  "password": "newpassword123",
-  "email": "updated@example.com",
-  "roleId": 2
-}
-4. DELETE - http://localhost:8000/LibraryManagement/users/:userId
-
-============================================== END ==============================================
-
 ********************************** ALLOCATIONS **********************************
 
-1. GET - http://localhost:8000/LibraryManagement/allocations?startIndex=0&limit=10
+1. GET - http://localhost:8000/LibraryManagement/allocations
+queryParams
+{
+  "startIndex":0,
+  "limit":10
+}
  
- 1.1 GET SINGLE ALLOCATION - GET http://localhost:8000/LibraryManagement/allocations/:allocationId
+ 1.1 GET SINGLE ALLOCATION - GET http://localhost:8000/LibraryManagement/allocations/:userId
 
 2. POST - http://localhost:8000/LibraryManagement/allocations
+body
 {
   "userId": 1,
   "bookId": 1
 }
 
-3. PUT - http://localhost:8000/LibraryManagement/allocations/:allocationId
+3. PUT - http://localhost:8000/LibraryManagement/allocations
 {
   "userId": 1
 }

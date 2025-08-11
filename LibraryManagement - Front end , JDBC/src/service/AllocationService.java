@@ -69,10 +69,6 @@ public class AllocationService {
         if (allocation.getUserId() <= 0) {
             throw new IllegalArgumentException("Invalid user ID");
         }
-        if (allocation.getId() <= 0) {
-            throw new IllegalArgumentException("Invalid allocation ID");
-        }
-        
        
         UserDAO userDAO = new UserDAO();
         User user = userDAO.getUserById(allocation.getUserId());
@@ -81,15 +77,11 @@ public class AllocationService {
         }
         
         AllocationDAO allocationDAO = new AllocationDAO();
-        Allocation existingAllocation = allocationDAO.getAllocationById(allocation.getId());
+        Allocation existingAllocation = allocationDAO.getAllocationByUserId(allocation.getUserId());
         if (existingAllocation == null) {
             throw new IllegalArgumentException("Allocation not found");
         }
 
-        if (existingAllocation.getUserId() != allocation.getUserId()) {
-            throw new IllegalArgumentException("This allocation does not belong to the current user");
-        }
-        
         if (existingAllocation.getReturnedOn() != null) {
             throw new IllegalArgumentException("Book has already been returned");
         }
@@ -99,7 +91,7 @@ public class AllocationService {
         Timestamp currentTime = new Timestamp(System.currentTimeMillis());
         double fineAmount = calculateFine(existingAllocation.getDueOn(), currentTime);
         
-        allocationDAO.returnBook(allocation.getId(), currentTime, fineAmount);
+        allocationDAO.returnBook(existingAllocation.getId(), currentTime, fineAmount);
         
         BookDAO bookDAO = new BookDAO();
         Book book = bookDAO.getBookById(existingAllocation.getBookId());
@@ -123,13 +115,13 @@ public class AllocationService {
         return allocationDAO.getAllAllocationsPaginated(startIndex, limit);
     }
     
-    public Allocation getAllocationById(int id) throws Exception {
-        if (id <= 0) {
-            throw new IllegalArgumentException("Invalid allocation ID");
+    public Allocation getAllocationByUserId(int user_id) throws Exception {
+        if (user_id <= 0) {
+            throw new IllegalArgumentException("Invalid user ID");
         }
         
         AllocationDAO allocationDAO = new AllocationDAO();
-        Allocation allocation = allocationDAO.getAllocationById(id);
+        Allocation allocation = allocationDAO.getAllocationByUserId(user_id);
         if (allocation == null) {
             throw new IllegalArgumentException("Allocation not found");
         }
